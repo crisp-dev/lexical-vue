@@ -41,9 +41,7 @@ declare const _default: <TOption extends MenuOption>(__VLS_props: NonNullable<Aw
             matchingString: string;
         }): void;
     };
-}>) => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
-    [key: string]: any;
-}> & {
+}>) => import("vue").VNode & {
     __ctx?: Awaited<typeof __VLS_setup>;
 };
 export default _default;

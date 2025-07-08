@@ -23,8 +23,8 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -33,10 +33,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -45,16 +45,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -87,8 +87,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -104,14 +104,99 @@ declare const _default: import("vue").Ref<{
                 length: number;
                 integrate: (transaction: import("yjs").Transaction, offset: number) => void;
             } | null;
-            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+            _map: Map<string, {
+                origin: {
+                    client: number;
+                    clock: number;
+                } | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
+                rightOrigin: {
+                    client: number;
+                    clock: number;
+                } | null;
+                parent: {
+                    client: number;
+                    clock: number;
+                } | {
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
+                    _length: number;
+                    _eH: {
+                        l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
+                    };
+                    _dEH: {
+                        l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
+                    };
+                    _searchMarker: {
+                        p: /*elided*/ any;
+                        index: number;
+                        timestamp: number;
+                    }[] | null;
+                    readonly parent: /*elided*/ any | null;
+                    _integrate: (y: Doc, item: import("yjs").Item | null) => void;
+                    _copy: () => import("yjs").AbstractType<any>;
+                    clone: () => import("yjs").AbstractType<any>;
+                    _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
+                    readonly _first: /*elided*/ any | null;
+                    _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
+                    observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                    observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                    unobserve: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                    unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                    toJSON: () => any;
+                } | null;
+                parentSub: string | null;
+                redone: {
+                    client: number;
+                    clock: number;
+                } | null;
+                content: {
+                    getLength: () => number;
+                    getContent: () => Array<any>;
+                    isCountable: () => boolean;
+                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                    delete: (_transaction: import("yjs").Transaction) => void;
+                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                    getRef: () => number;
+                };
+                info: number;
+                marker: boolean;
+                keep: boolean;
+                readonly countable: boolean;
+                deleted: boolean;
+                markDeleted: () => void;
+                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
+                readonly lastId: {
+                    client: number;
+                    clock: number;
+                };
+                mergeWith: (right: import("yjs").Item) => boolean;
+                delete: (transaction: import("yjs").Transaction) => void;
+                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                id: {
+                    client: number;
+                    clock: number;
+                };
+                length: number;
+                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+            }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
             _start: {
                 origin: {
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -120,10 +205,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -132,16 +217,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -174,8 +259,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -191,7 +276,7 @@ declare const _default: import("vue").Ref<{
                 length: number;
                 integrate: (transaction: import("yjs").Transaction, offset: number) => void;
             } | null;
-            doc: any | null;
+            doc: /*elided*/ any | null;
             _length: number;
             _eH: {
                 l: ((arg0: import("yjs").YEvent<any>, arg1: import("yjs").Transaction) => void)[];
@@ -200,15 +285,264 @@ declare const _default: import("vue").Ref<{
                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
             };
             _searchMarker: {
-                p: any;
+                p: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | {
+                        _item: /*elided*/ any | null;
+                        _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: /*elided*/ any | null;
+                        doc: /*elided*/ any | null;
+                        _length: number;
+                        _eH: {
+                            l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
+                        };
+                        _dEH: {
+                            l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
+                        };
+                        _searchMarker: /*elided*/ any[] | null;
+                        readonly parent: /*elided*/ any | null;
+                        _integrate: (y: Doc, item: import("yjs").Item | null) => void;
+                        _copy: () => import("yjs").AbstractType<any>;
+                        clone: () => import("yjs").AbstractType<any>;
+                        _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
+                        readonly _first: /*elided*/ any | null;
+                        _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
+                        observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                        observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                        unobserve: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                        unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                        toJSON: () => any;
+                    } | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                };
                 index: number;
                 timestamp: number;
             }[] | null;
             readonly parent: {
-                _item: any | null;
-                _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                _start: any | null;
-                doc: any | null;
+                _item: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                } | null;
+                _map: Map<string, {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                _start: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                } | null;
+                doc: /*elided*/ any | null;
                 _length: number;
                 _eH: {
                     l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -217,16 +551,128 @@ declare const _default: import("vue").Ref<{
                     l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                 };
                 _searchMarker: {
-                    p: any;
+                    p: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    };
                     index: number;
                     timestamp: number;
                 }[] | null;
-                readonly parent: any | null;
+                readonly parent: /*elided*/ any | null;
                 _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                 _copy: () => import("yjs").AbstractType<any>;
                 clone: () => import("yjs").AbstractType<any>;
                 _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                readonly _first: any | null;
+                readonly _first: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                } | null;
                 _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                 observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                 observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -243,8 +689,8 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -253,10 +699,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -265,16 +711,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -307,8 +753,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -337,8 +783,8 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -347,10 +793,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -359,16 +805,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -401,8 +847,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -437,64 +883,73 @@ declare const _default: import("vue").Ref<{
                     readonly BYTES_PER_ELEMENT: number;
                     readonly buffer: {
                         readonly byteLength: number;
-                        slice: (begin: number, end?: number) => ArrayBuffer;
+                        slice: (begin?: number, end?: number) => ArrayBuffer;
+                        readonly maxByteLength: number;
+                        readonly resizable: boolean;
+                        resize: (newByteLength?: number) => void;
+                        readonly detached: boolean;
+                        transfer: (newByteLength?: number) => ArrayBuffer;
+                        transferToFixedLength: (newByteLength?: number) => ArrayBuffer;
                         readonly [Symbol.toStringTag]: string;
                     } | {
                         readonly byteLength: number;
-                        slice: (begin: number, end?: number) => SharedArrayBuffer;
+                        slice: (begin?: number, end?: number) => SharedArrayBuffer;
+                        readonly growable: boolean;
+                        readonly maxByteLength: number;
+                        grow: (newByteLength?: number) => void;
                         readonly [Symbol.species]: SharedArrayBuffer;
                         readonly [Symbol.toStringTag]: "SharedArrayBuffer";
                     };
                     readonly byteLength: number;
                     readonly byteOffset: number;
-                    copyWithin: (target: number, start: number, end?: number) => Uint8Array;
-                    every: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                    fill: (value: number, start?: number, end?: number) => Uint8Array;
-                    filter: (predicate: (value: number, index: number, array: Uint8Array) => any, thisArg?: any) => Uint8Array;
-                    find: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number | undefined;
-                    findIndex: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number;
-                    forEach: (callbackfn: (value: number, index: number, array: Uint8Array) => void, thisArg?: any) => void;
+                    copyWithin: (target: number, start: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                    every: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                    fill: (value: number, start?: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                    filter: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => any, thisArg?: any) => Uint8Array<ArrayBuffer>;
+                    find: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number | undefined;
+                    findIndex: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number;
+                    forEach: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => void, thisArg?: any) => void;
                     indexOf: (searchElement: number, fromIndex?: number) => number;
                     join: (separator?: string) => string;
                     lastIndexOf: (searchElement: number, fromIndex?: number) => number;
                     readonly length: number;
-                    map: (callbackfn: (value: number, index: number, array: Uint8Array) => number, thisArg?: any) => Uint8Array;
+                    map: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => number, thisArg?: any) => Uint8Array<ArrayBuffer>;
                     reduce: {
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                     };
                     reduceRight: {
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                     };
-                    reverse: () => Uint8Array;
+                    reverse: () => Uint8Array<ArrayBufferLike>;
                     set: (array: ArrayLike<number>, offset?: number) => void;
-                    slice: (start?: number, end?: number) => Uint8Array;
-                    some: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                    sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                    subarray: (begin?: number, end?: number) => Uint8Array;
+                    slice: (start?: number, end?: number) => Uint8Array<ArrayBuffer>;
+                    some: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                    sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBufferLike>;
+                    subarray: (begin?: number, end?: number) => Uint8Array<ArrayBufferLike>;
                     toLocaleString: {
                         (): string;
                         (locales: string | string[], options?: Intl.NumberFormatOptions): string;
                     };
                     toString: () => string;
-                    valueOf: () => Uint8Array;
-                    entries: () => IterableIterator<[number, number]>;
-                    keys: () => IterableIterator<number>;
-                    values: () => IterableIterator<number>;
+                    valueOf: () => Uint8Array<ArrayBufferLike>;
+                    entries: () => ArrayIterator<[number, number]>;
+                    keys: () => ArrayIterator<number>;
+                    values: () => ArrayIterator<number>;
                     includes: (searchElement: number, fromIndex?: number) => boolean;
                     at: (index: number) => number | undefined;
                     findLast: {
-                        <S extends number>(predicate: (value: number, index: number, array: Uint8Array) => value is S, thisArg?: any): S | undefined;
-                        (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): number | undefined;
+                        <S extends number>(predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => value is S, thisArg?: any): S | undefined;
+                        (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any): number | undefined;
                     };
-                    findLastIndex: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => number;
-                    toReversed: () => Uint8Array;
-                    toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                    with: (index: number, value: number) => Uint8Array;
-                    [Symbol.iterator]: () => IterableIterator<number>;
+                    findLastIndex: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => number;
+                    toReversed: () => Uint8Array<ArrayBuffer>;
+                    toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBuffer>;
+                    with: (index: number, value: number) => Uint8Array<ArrayBuffer>;
+                    [Symbol.iterator]: () => ArrayIterator<number>;
                     readonly [Symbol.toStringTag]: "Uint8Array";
                 };
             } | null;
@@ -503,69 +958,78 @@ declare const _default: import("vue").Ref<{
                 readonly BYTES_PER_ELEMENT: number;
                 readonly buffer: {
                     readonly byteLength: number;
-                    slice: (begin: number, end?: number) => ArrayBuffer;
+                    slice: (begin?: number, end?: number) => ArrayBuffer;
+                    readonly maxByteLength: number;
+                    readonly resizable: boolean;
+                    resize: (newByteLength?: number) => void;
+                    readonly detached: boolean;
+                    transfer: (newByteLength?: number) => ArrayBuffer;
+                    transferToFixedLength: (newByteLength?: number) => ArrayBuffer;
                     readonly [Symbol.toStringTag]: string;
                 } | {
                     readonly byteLength: number;
-                    slice: (begin: number, end?: number) => SharedArrayBuffer;
+                    slice: (begin?: number, end?: number) => SharedArrayBuffer;
+                    readonly growable: boolean;
+                    readonly maxByteLength: number;
+                    grow: (newByteLength?: number) => void;
                     readonly [Symbol.species]: SharedArrayBuffer;
                     readonly [Symbol.toStringTag]: "SharedArrayBuffer";
                 };
                 readonly byteLength: number;
                 readonly byteOffset: number;
-                copyWithin: (target: number, start: number, end?: number) => Uint8Array;
-                every: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                fill: (value: number, start?: number, end?: number) => Uint8Array;
-                filter: (predicate: (value: number, index: number, array: Uint8Array) => any, thisArg?: any) => Uint8Array;
-                find: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number | undefined;
-                findIndex: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number;
-                forEach: (callbackfn: (value: number, index: number, array: Uint8Array) => void, thisArg?: any) => void;
+                copyWithin: (target: number, start: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                every: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                fill: (value: number, start?: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                filter: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => any, thisArg?: any) => Uint8Array<ArrayBuffer>;
+                find: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number | undefined;
+                findIndex: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number;
+                forEach: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => void, thisArg?: any) => void;
                 indexOf: (searchElement: number, fromIndex?: number) => number;
                 join: (separator?: string) => string;
                 lastIndexOf: (searchElement: number, fromIndex?: number) => number;
                 readonly length: number;
-                map: (callbackfn: (value: number, index: number, array: Uint8Array) => number, thisArg?: any) => Uint8Array;
+                map: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => number, thisArg?: any) => Uint8Array<ArrayBuffer>;
                 reduce: {
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                 };
                 reduceRight: {
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                 };
-                reverse: () => Uint8Array;
+                reverse: () => Uint8Array<ArrayBufferLike>;
                 set: (array: ArrayLike<number>, offset?: number) => void;
-                slice: (start?: number, end?: number) => Uint8Array;
-                some: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                subarray: (begin?: number, end?: number) => Uint8Array;
+                slice: (start?: number, end?: number) => Uint8Array<ArrayBuffer>;
+                some: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBufferLike>;
+                subarray: (begin?: number, end?: number) => Uint8Array<ArrayBufferLike>;
                 toLocaleString: {
                     (): string;
                     (locales: string | string[], options?: Intl.NumberFormatOptions): string;
                 };
                 toString: () => string;
-                valueOf: () => Uint8Array;
-                entries: () => IterableIterator<[number, number]>;
-                keys: () => IterableIterator<number>;
-                values: () => IterableIterator<number>;
+                valueOf: () => Uint8Array<ArrayBufferLike>;
+                entries: () => ArrayIterator<[number, number]>;
+                keys: () => ArrayIterator<number>;
+                values: () => ArrayIterator<number>;
                 includes: (searchElement: number, fromIndex?: number) => boolean;
                 at: (index: number) => number | undefined;
                 findLast: {
-                    <S extends number>(predicate: (value: number, index: number, array: Uint8Array) => value is S, thisArg?: any): S | undefined;
-                    (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): number | undefined;
+                    <S extends number>(predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => value is S, thisArg?: any): S | undefined;
+                    (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any): number | undefined;
                 };
-                findLastIndex: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => number;
-                toReversed: () => Uint8Array;
-                toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                with: (index: number, value: number) => Uint8Array;
-                [Symbol.iterator]: () => IterableIterator<number>;
+                findLastIndex: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => number;
+                toReversed: () => Uint8Array<ArrayBuffer>;
+                toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBuffer>;
+                with: (index: number, value: number) => Uint8Array<ArrayBuffer>;
+                [Symbol.iterator]: () => ArrayIterator<number>;
                 readonly [Symbol.toStringTag]: "Uint8Array";
             } | null;
         };
         _transaction: {
-            doc: any;
+            doc: /*elided*/ any;
             deleteSet: {
                 clients: Map<number, {
                     clock: number;
@@ -578,10 +1042,178 @@ declare const _default: import("vue").Ref<{
             changedParentTypes: Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, {
                 target: any;
                 currentTarget: {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    _map: Map<string, {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -590,16 +1222,128 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        };
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -607,7 +1351,7 @@ declare const _default: import("vue").Ref<{
                     unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                     toJSON: () => any;
                 };
-                transaction: any;
+                transaction: /*elided*/ any;
                 _changes: Object | null;
                 _keys: (Map<string, {
                     action: "add" | "update" | "delete";
@@ -620,10 +1364,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>) | null;
                 _delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -632,16 +1544,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -649,11 +1673,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[] | null;
                 _path: Array<string | number> | null;
                 readonly path: (string | number)[];
@@ -669,10 +1693,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>;
                 readonly delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -681,16 +1873,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -698,11 +2002,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[];
                 adds: (struct: import("yjs").AbstractStruct) => boolean;
                 readonly changes: {
@@ -711,8 +2015,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -721,10 +2025,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -733,16 +2037,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -775,8 +2079,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -797,8 +2101,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -807,10 +2111,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -819,16 +2123,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -861,8 +2165,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -886,9 +2190,9 @@ declare const _default: import("vue").Ref<{
                         oldValue: any;
                     }>, keyof Map<any, any>>;
                     delta: {
-                        insert?: Array<any> | string;
-                        delete?: number;
-                        retain?: number;
+                        insert?: (Array<any> | string) | undefined;
+                        delete?: number | undefined;
+                        retain?: number | undefined;
                     }[];
                 };
             }[]> & Omit<Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, import("yjs").YEvent<any>[]>, keyof Map<any, any>>;
@@ -906,13 +2210,13 @@ declare const _default: import("vue").Ref<{
             origin: any;
             meta: Map<any, any> & Omit<Map<any, any>, keyof Map<any, any>>;
             local: boolean;
-            subdocsAdded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsRemoved: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsLoaded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsAdded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsRemoved: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsLoaded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
             _needFormattingCleanup: boolean;
         } | null;
         _transactionCleanups: {
-            doc: any;
+            doc: /*elided*/ any;
             deleteSet: {
                 clients: Map<number, {
                     clock: number;
@@ -925,10 +2229,178 @@ declare const _default: import("vue").Ref<{
             changedParentTypes: Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, {
                 target: any;
                 currentTarget: {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    _map: Map<string, {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -937,16 +2409,128 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        };
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -954,7 +2538,7 @@ declare const _default: import("vue").Ref<{
                     unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                     toJSON: () => any;
                 };
-                transaction: any;
+                transaction: /*elided*/ any;
                 _changes: Object | null;
                 _keys: (Map<string, {
                     action: "add" | "update" | "delete";
@@ -967,10 +2551,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>) | null;
                 _delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -979,16 +2731,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -996,11 +2860,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[] | null;
                 _path: Array<string | number> | null;
                 readonly path: (string | number)[];
@@ -1016,10 +2880,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>;
                 readonly delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1028,16 +3060,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1045,11 +3189,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[];
                 adds: (struct: import("yjs").AbstractStruct) => boolean;
                 readonly changes: {
@@ -1058,8 +3202,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -1068,10 +3212,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1080,16 +3224,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1122,8 +3266,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -1144,8 +3288,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -1154,10 +3298,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1166,16 +3310,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1208,8 +3352,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -1233,9 +3377,9 @@ declare const _default: import("vue").Ref<{
                         oldValue: any;
                     }>, keyof Map<any, any>>;
                     delta: {
-                        insert?: Array<any> | string;
-                        delete?: number;
-                        retain?: number;
+                        insert?: (Array<any> | string) | undefined;
+                        delete?: number | undefined;
+                        retain?: number | undefined;
                     }[];
                 };
             }[]> & Omit<Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, import("yjs").YEvent<any>[]>, keyof Map<any, any>>;
@@ -1253,19 +3397,19 @@ declare const _default: import("vue").Ref<{
             origin: any;
             meta: Map<any, any> & Omit<Map<any, any>, keyof Map<any, any>>;
             local: boolean;
-            subdocsAdded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsRemoved: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsLoaded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsAdded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsRemoved: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsLoaded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
             _needFormattingCleanup: boolean;
         }[];
-        subdocs: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
+        subdocs: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
         _item: {
             origin: {
                 client: number;
                 clock: number;
             } | null;
-            left: any | null;
-            right: any | null;
+            left: /*elided*/ any | null;
+            right: /*elided*/ any | null;
             rightOrigin: {
                 client: number;
                 clock: number;
@@ -1274,10 +3418,10 @@ declare const _default: import("vue").Ref<{
                 client: number;
                 clock: number;
             } | {
-                _item: any | null;
-                _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                _start: any | null;
-                doc: any | null;
+                _item: /*elided*/ any | null;
+                _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                _start: /*elided*/ any | null;
+                doc: /*elided*/ any | null;
                 _length: number;
                 _eH: {
                     l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1286,16 +3430,16 @@ declare const _default: import("vue").Ref<{
                     l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                 };
                 _searchMarker: {
-                    p: any;
+                    p: /*elided*/ any;
                     index: number;
                     timestamp: number;
                 }[] | null;
-                readonly parent: any | null;
+                readonly parent: /*elided*/ any | null;
                 _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                 _copy: () => import("yjs").AbstractType<any>;
                 clone: () => import("yjs").AbstractType<any>;
                 _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                readonly _first: any | null;
+                readonly _first: /*elided*/ any | null;
                 _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                 observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                 observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1328,8 +3472,8 @@ declare const _default: import("vue").Ref<{
             deleted: boolean;
             markDeleted: () => void;
             getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-            readonly next: any | null;
-            readonly prev: any | null;
+            readonly next: /*elided*/ any | null;
+            readonly prev: /*elided*/ any | null;
             readonly lastId: {
                 client: number;
                 clock: number;
@@ -1350,15 +3494,16 @@ declare const _default: import("vue").Ref<{
         meta: any;
         isLoaded: boolean;
         isSynced: boolean;
+        isDestroyed: boolean;
         whenLoaded: {
             then: <TResult1 = any, TResult2 = never>(onfulfilled?: ((value: any) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => Promise<TResult1 | TResult2>;
-            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any | TResult>;
+            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any>;
             finally: (onfinally?: (() => void) | null | undefined) => Promise<any>;
             readonly [Symbol.toStringTag]: string;
         };
         whenSynced: {
             then: <TResult1 = any, TResult2 = never>(onfulfilled?: ((value: any) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => Promise<TResult1 | TResult2>;
-            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any | TResult>;
+            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any>;
             finally: (onfinally?: (() => void) | null | undefined) => Promise<any>;
             readonly [Symbol.toStringTag]: string;
         };
@@ -1401,8 +3546,8 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -1411,10 +3556,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1423,16 +3568,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1465,8 +3610,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -1482,14 +3627,99 @@ declare const _default: import("vue").Ref<{
                 length: number;
                 integrate: (transaction: import("yjs").Transaction, offset: number) => void;
             } | null;
-            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+            _map: Map<string, {
+                origin: {
+                    client: number;
+                    clock: number;
+                } | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
+                rightOrigin: {
+                    client: number;
+                    clock: number;
+                } | null;
+                parent: {
+                    client: number;
+                    clock: number;
+                } | {
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
+                    _length: number;
+                    _eH: {
+                        l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
+                    };
+                    _dEH: {
+                        l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
+                    };
+                    _searchMarker: {
+                        p: /*elided*/ any;
+                        index: number;
+                        timestamp: number;
+                    }[] | null;
+                    readonly parent: /*elided*/ any | null;
+                    _integrate: (y: Doc, item: import("yjs").Item | null) => void;
+                    _copy: () => import("yjs").AbstractType<any>;
+                    clone: () => import("yjs").AbstractType<any>;
+                    _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
+                    readonly _first: /*elided*/ any | null;
+                    _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
+                    observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                    observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                    unobserve: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                    unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                    toJSON: () => any;
+                } | null;
+                parentSub: string | null;
+                redone: {
+                    client: number;
+                    clock: number;
+                } | null;
+                content: {
+                    getLength: () => number;
+                    getContent: () => Array<any>;
+                    isCountable: () => boolean;
+                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                    delete: (_transaction: import("yjs").Transaction) => void;
+                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                    getRef: () => number;
+                };
+                info: number;
+                marker: boolean;
+                keep: boolean;
+                readonly countable: boolean;
+                deleted: boolean;
+                markDeleted: () => void;
+                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
+                readonly lastId: {
+                    client: number;
+                    clock: number;
+                };
+                mergeWith: (right: import("yjs").Item) => boolean;
+                delete: (transaction: import("yjs").Transaction) => void;
+                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                id: {
+                    client: number;
+                    clock: number;
+                };
+                length: number;
+                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+            }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
             _start: {
                 origin: {
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -1498,10 +3728,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1510,16 +3740,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1552,8 +3782,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -1569,7 +3799,7 @@ declare const _default: import("vue").Ref<{
                 length: number;
                 integrate: (transaction: import("yjs").Transaction, offset: number) => void;
             } | null;
-            doc: any | null;
+            doc: /*elided*/ any | null;
             _length: number;
             _eH: {
                 l: ((arg0: import("yjs").YEvent<any>, arg1: import("yjs").Transaction) => void)[];
@@ -1578,15 +3808,264 @@ declare const _default: import("vue").Ref<{
                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
             };
             _searchMarker: {
-                p: any;
+                p: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | {
+                        _item: /*elided*/ any | null;
+                        _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: /*elided*/ any | null;
+                        doc: /*elided*/ any | null;
+                        _length: number;
+                        _eH: {
+                            l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
+                        };
+                        _dEH: {
+                            l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
+                        };
+                        _searchMarker: /*elided*/ any[] | null;
+                        readonly parent: /*elided*/ any | null;
+                        _integrate: (y: Doc, item: import("yjs").Item | null) => void;
+                        _copy: () => import("yjs").AbstractType<any>;
+                        clone: () => import("yjs").AbstractType<any>;
+                        _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
+                        readonly _first: /*elided*/ any | null;
+                        _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
+                        observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                        observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                        unobserve: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
+                        unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
+                        toJSON: () => any;
+                    } | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                };
                 index: number;
                 timestamp: number;
             }[] | null;
             readonly parent: {
-                _item: any | null;
-                _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                _start: any | null;
-                doc: any | null;
+                _item: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                } | null;
+                _map: Map<string, {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                _start: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                } | null;
+                doc: /*elided*/ any | null;
                 _length: number;
                 _eH: {
                     l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1595,16 +4074,128 @@ declare const _default: import("vue").Ref<{
                     l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                 };
                 _searchMarker: {
-                    p: any;
+                    p: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    };
                     index: number;
                     timestamp: number;
                 }[] | null;
-                readonly parent: any | null;
+                readonly parent: /*elided*/ any | null;
                 _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                 _copy: () => import("yjs").AbstractType<any>;
                 clone: () => import("yjs").AbstractType<any>;
                 _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                readonly _first: any | null;
+                readonly _first: {
+                    origin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    left: /*elided*/ any | null;
+                    right: /*elided*/ any | null;
+                    rightOrigin: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    parent: {
+                        client: number;
+                        clock: number;
+                    } | /*elided*/ any | null;
+                    parentSub: string | null;
+                    redone: {
+                        client: number;
+                        clock: number;
+                    } | null;
+                    content: {
+                        getLength: () => number;
+                        getContent: () => Array<any>;
+                        isCountable: () => boolean;
+                        copy: () => import("yjs/dist/src/internals").AbstractContent;
+                        splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                        mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                        integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                        delete: (_transaction: import("yjs").Transaction) => void;
+                        gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                        write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                        getRef: () => number;
+                    };
+                    info: number;
+                    marker: boolean;
+                    keep: boolean;
+                    readonly countable: boolean;
+                    deleted: boolean;
+                    markDeleted: () => void;
+                    getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                    readonly next: /*elided*/ any | null;
+                    readonly prev: /*elided*/ any | null;
+                    readonly lastId: {
+                        client: number;
+                        clock: number;
+                    };
+                    mergeWith: (right: import("yjs").Item) => boolean;
+                    delete: (transaction: import("yjs").Transaction) => void;
+                    gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                    write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                    id: {
+                        client: number;
+                        clock: number;
+                    };
+                    length: number;
+                    integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                } | null;
                 _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                 observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                 observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1621,8 +4212,8 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -1631,10 +4222,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1643,16 +4234,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1685,8 +4276,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -1715,8 +4306,8 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | null;
-                left: any | null;
-                right: any | null;
+                left: /*elided*/ any | null;
+                right: /*elided*/ any | null;
                 rightOrigin: {
                     client: number;
                     clock: number;
@@ -1725,10 +4316,10 @@ declare const _default: import("vue").Ref<{
                     client: number;
                     clock: number;
                 } | {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: /*elided*/ any | null;
+                    _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: /*elided*/ any | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1737,16 +4328,16 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: /*elided*/ any;
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: /*elided*/ any | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1779,8 +4370,8 @@ declare const _default: import("vue").Ref<{
                 deleted: boolean;
                 markDeleted: () => void;
                 getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                readonly next: any | null;
-                readonly prev: any | null;
+                readonly next: /*elided*/ any | null;
+                readonly prev: /*elided*/ any | null;
                 readonly lastId: {
                     client: number;
                     clock: number;
@@ -1815,64 +4406,73 @@ declare const _default: import("vue").Ref<{
                     readonly BYTES_PER_ELEMENT: number;
                     readonly buffer: {
                         readonly byteLength: number;
-                        slice: (begin: number, end?: number) => ArrayBuffer;
+                        slice: (begin?: number, end?: number) => ArrayBuffer;
+                        readonly maxByteLength: number;
+                        readonly resizable: boolean;
+                        resize: (newByteLength?: number) => void;
+                        readonly detached: boolean;
+                        transfer: (newByteLength?: number) => ArrayBuffer;
+                        transferToFixedLength: (newByteLength?: number) => ArrayBuffer;
                         readonly [Symbol.toStringTag]: string;
                     } | {
                         readonly byteLength: number;
-                        slice: (begin: number, end?: number) => SharedArrayBuffer;
+                        slice: (begin?: number, end?: number) => SharedArrayBuffer;
+                        readonly growable: boolean;
+                        readonly maxByteLength: number;
+                        grow: (newByteLength?: number) => void;
                         readonly [Symbol.species]: SharedArrayBuffer;
                         readonly [Symbol.toStringTag]: "SharedArrayBuffer";
                     };
                     readonly byteLength: number;
                     readonly byteOffset: number;
-                    copyWithin: (target: number, start: number, end?: number) => Uint8Array;
-                    every: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                    fill: (value: number, start?: number, end?: number) => Uint8Array;
-                    filter: (predicate: (value: number, index: number, array: Uint8Array) => any, thisArg?: any) => Uint8Array;
-                    find: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number | undefined;
-                    findIndex: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number;
-                    forEach: (callbackfn: (value: number, index: number, array: Uint8Array) => void, thisArg?: any) => void;
+                    copyWithin: (target: number, start: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                    every: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                    fill: (value: number, start?: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                    filter: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => any, thisArg?: any) => Uint8Array<ArrayBuffer>;
+                    find: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number | undefined;
+                    findIndex: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number;
+                    forEach: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => void, thisArg?: any) => void;
                     indexOf: (searchElement: number, fromIndex?: number) => number;
                     join: (separator?: string) => string;
                     lastIndexOf: (searchElement: number, fromIndex?: number) => number;
                     readonly length: number;
-                    map: (callbackfn: (value: number, index: number, array: Uint8Array) => number, thisArg?: any) => Uint8Array;
+                    map: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => number, thisArg?: any) => Uint8Array<ArrayBuffer>;
                     reduce: {
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                     };
                     reduceRight: {
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                        (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                        <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                     };
-                    reverse: () => Uint8Array;
+                    reverse: () => Uint8Array<ArrayBufferLike>;
                     set: (array: ArrayLike<number>, offset?: number) => void;
-                    slice: (start?: number, end?: number) => Uint8Array;
-                    some: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                    sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                    subarray: (begin?: number, end?: number) => Uint8Array;
+                    slice: (start?: number, end?: number) => Uint8Array<ArrayBuffer>;
+                    some: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                    sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBufferLike>;
+                    subarray: (begin?: number, end?: number) => Uint8Array<ArrayBufferLike>;
                     toLocaleString: {
                         (): string;
                         (locales: string | string[], options?: Intl.NumberFormatOptions): string;
                     };
                     toString: () => string;
-                    valueOf: () => Uint8Array;
-                    entries: () => IterableIterator<[number, number]>;
-                    keys: () => IterableIterator<number>;
-                    values: () => IterableIterator<number>;
+                    valueOf: () => Uint8Array<ArrayBufferLike>;
+                    entries: () => ArrayIterator<[number, number]>;
+                    keys: () => ArrayIterator<number>;
+                    values: () => ArrayIterator<number>;
                     includes: (searchElement: number, fromIndex?: number) => boolean;
                     at: (index: number) => number | undefined;
                     findLast: {
-                        <S extends number>(predicate: (value: number, index: number, array: Uint8Array) => value is S, thisArg?: any): S | undefined;
-                        (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): number | undefined;
+                        <S extends number>(predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => value is S, thisArg?: any): S | undefined;
+                        (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any): number | undefined;
                     };
-                    findLastIndex: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => number;
-                    toReversed: () => Uint8Array;
-                    toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                    with: (index: number, value: number) => Uint8Array;
-                    [Symbol.iterator]: () => IterableIterator<number>;
+                    findLastIndex: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => number;
+                    toReversed: () => Uint8Array<ArrayBuffer>;
+                    toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBuffer>;
+                    with: (index: number, value: number) => Uint8Array<ArrayBuffer>;
+                    [Symbol.iterator]: () => ArrayIterator<number>;
                     readonly [Symbol.toStringTag]: "Uint8Array";
                 };
             } | null;
@@ -1881,69 +4481,78 @@ declare const _default: import("vue").Ref<{
                 readonly BYTES_PER_ELEMENT: number;
                 readonly buffer: {
                     readonly byteLength: number;
-                    slice: (begin: number, end?: number) => ArrayBuffer;
+                    slice: (begin?: number, end?: number) => ArrayBuffer;
+                    readonly maxByteLength: number;
+                    readonly resizable: boolean;
+                    resize: (newByteLength?: number) => void;
+                    readonly detached: boolean;
+                    transfer: (newByteLength?: number) => ArrayBuffer;
+                    transferToFixedLength: (newByteLength?: number) => ArrayBuffer;
                     readonly [Symbol.toStringTag]: string;
                 } | {
                     readonly byteLength: number;
-                    slice: (begin: number, end?: number) => SharedArrayBuffer;
+                    slice: (begin?: number, end?: number) => SharedArrayBuffer;
+                    readonly growable: boolean;
+                    readonly maxByteLength: number;
+                    grow: (newByteLength?: number) => void;
                     readonly [Symbol.species]: SharedArrayBuffer;
                     readonly [Symbol.toStringTag]: "SharedArrayBuffer";
                 };
                 readonly byteLength: number;
                 readonly byteOffset: number;
-                copyWithin: (target: number, start: number, end?: number) => Uint8Array;
-                every: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                fill: (value: number, start?: number, end?: number) => Uint8Array;
-                filter: (predicate: (value: number, index: number, array: Uint8Array) => any, thisArg?: any) => Uint8Array;
-                find: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number | undefined;
-                findIndex: (predicate: (value: number, index: number, obj: Uint8Array) => boolean, thisArg?: any) => number;
-                forEach: (callbackfn: (value: number, index: number, array: Uint8Array) => void, thisArg?: any) => void;
+                copyWithin: (target: number, start: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                every: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                fill: (value: number, start?: number, end?: number) => Uint8Array<ArrayBufferLike>;
+                filter: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => any, thisArg?: any) => Uint8Array<ArrayBuffer>;
+                find: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number | undefined;
+                findIndex: (predicate: (value: number, index: number, obj: Uint8Array<ArrayBufferLike>) => boolean, thisArg?: any) => number;
+                forEach: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => void, thisArg?: any) => void;
                 indexOf: (searchElement: number, fromIndex?: number) => number;
                 join: (separator?: string) => string;
                 lastIndexOf: (searchElement: number, fromIndex?: number) => number;
                 readonly length: number;
-                map: (callbackfn: (value: number, index: number, array: Uint8Array) => number, thisArg?: any) => Uint8Array;
+                map: (callbackfn: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => number, thisArg?: any) => Uint8Array<ArrayBuffer>;
                 reduce: {
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                 };
                 reduceRight: {
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number): number;
-                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number;
-                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array) => U, initialValue: U): U;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number): number;
+                    (callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => number, initialValue: number): number;
+                    <U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: Uint8Array<ArrayBufferLike>) => U, initialValue: U): U;
                 };
-                reverse: () => Uint8Array;
+                reverse: () => Uint8Array<ArrayBufferLike>;
                 set: (array: ArrayLike<number>, offset?: number) => void;
-                slice: (start?: number, end?: number) => Uint8Array;
-                some: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => boolean;
-                sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                subarray: (begin?: number, end?: number) => Uint8Array;
+                slice: (start?: number, end?: number) => Uint8Array<ArrayBuffer>;
+                some: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => boolean;
+                sort: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBufferLike>;
+                subarray: (begin?: number, end?: number) => Uint8Array<ArrayBufferLike>;
                 toLocaleString: {
                     (): string;
                     (locales: string | string[], options?: Intl.NumberFormatOptions): string;
                 };
                 toString: () => string;
-                valueOf: () => Uint8Array;
-                entries: () => IterableIterator<[number, number]>;
-                keys: () => IterableIterator<number>;
-                values: () => IterableIterator<number>;
+                valueOf: () => Uint8Array<ArrayBufferLike>;
+                entries: () => ArrayIterator<[number, number]>;
+                keys: () => ArrayIterator<number>;
+                values: () => ArrayIterator<number>;
                 includes: (searchElement: number, fromIndex?: number) => boolean;
                 at: (index: number) => number | undefined;
                 findLast: {
-                    <S extends number>(predicate: (value: number, index: number, array: Uint8Array) => value is S, thisArg?: any): S | undefined;
-                    (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any): number | undefined;
+                    <S extends number>(predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => value is S, thisArg?: any): S | undefined;
+                    (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any): number | undefined;
                 };
-                findLastIndex: (predicate: (value: number, index: number, array: Uint8Array) => unknown, thisArg?: any) => number;
-                toReversed: () => Uint8Array;
-                toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array;
-                with: (index: number, value: number) => Uint8Array;
-                [Symbol.iterator]: () => IterableIterator<number>;
+                findLastIndex: (predicate: (value: number, index: number, array: Uint8Array<ArrayBufferLike>) => unknown, thisArg?: any) => number;
+                toReversed: () => Uint8Array<ArrayBuffer>;
+                toSorted: (compareFn?: ((a: number, b: number) => number) | undefined) => Uint8Array<ArrayBuffer>;
+                with: (index: number, value: number) => Uint8Array<ArrayBuffer>;
+                [Symbol.iterator]: () => ArrayIterator<number>;
                 readonly [Symbol.toStringTag]: "Uint8Array";
             } | null;
         };
         _transaction: {
-            doc: any;
+            doc: /*elided*/ any;
             deleteSet: {
                 clients: Map<number, {
                     clock: number;
@@ -1956,10 +4565,178 @@ declare const _default: import("vue").Ref<{
             changedParentTypes: Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, {
                 target: any;
                 currentTarget: {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    _map: Map<string, {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -1968,16 +4745,128 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        };
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -1985,7 +4874,7 @@ declare const _default: import("vue").Ref<{
                     unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                     toJSON: () => any;
                 };
-                transaction: any;
+                transaction: /*elided*/ any;
                 _changes: Object | null;
                 _keys: (Map<string, {
                     action: "add" | "update" | "delete";
@@ -1998,10 +4887,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>) | null;
                 _delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2010,16 +5067,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2027,11 +5196,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[] | null;
                 _path: Array<string | number> | null;
                 readonly path: (string | number)[];
@@ -2047,10 +5216,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>;
                 readonly delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2059,16 +5396,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2076,11 +5525,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[];
                 adds: (struct: import("yjs").AbstractStruct) => boolean;
                 readonly changes: {
@@ -2089,8 +5538,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -2099,10 +5548,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2111,16 +5560,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2153,8 +5602,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -2175,8 +5624,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -2185,10 +5634,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2197,16 +5646,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2239,8 +5688,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -2264,9 +5713,9 @@ declare const _default: import("vue").Ref<{
                         oldValue: any;
                     }>, keyof Map<any, any>>;
                     delta: {
-                        insert?: Array<any> | string;
-                        delete?: number;
-                        retain?: number;
+                        insert?: (Array<any> | string) | undefined;
+                        delete?: number | undefined;
+                        retain?: number | undefined;
                     }[];
                 };
             }[]> & Omit<Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, import("yjs").YEvent<any>[]>, keyof Map<any, any>>;
@@ -2284,13 +5733,13 @@ declare const _default: import("vue").Ref<{
             origin: any;
             meta: Map<any, any> & Omit<Map<any, any>, keyof Map<any, any>>;
             local: boolean;
-            subdocsAdded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsRemoved: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsLoaded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsAdded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsRemoved: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsLoaded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
             _needFormattingCleanup: boolean;
         } | null;
         _transactionCleanups: {
-            doc: any;
+            doc: /*elided*/ any;
             deleteSet: {
                 clients: Map<number, {
                     clock: number;
@@ -2303,10 +5752,178 @@ declare const _default: import("vue").Ref<{
             changedParentTypes: Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, {
                 target: any;
                 currentTarget: {
-                    _item: any | null;
-                    _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                    _start: any | null;
-                    doc: any | null;
+                    _item: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    _map: Map<string, {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                    _start: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
+                    doc: /*elided*/ any | null;
                     _length: number;
                     _eH: {
                         l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2315,16 +5932,128 @@ declare const _default: import("vue").Ref<{
                         l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                     };
                     _searchMarker: {
-                        p: any;
+                        p: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        };
                         index: number;
                         timestamp: number;
                     }[] | null;
-                    readonly parent: any | null;
+                    readonly parent: /*elided*/ any | null;
                     _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                     _copy: () => import("yjs").AbstractType<any>;
                     clone: () => import("yjs").AbstractType<any>;
                     _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                    readonly _first: any | null;
+                    readonly _first: {
+                        origin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
+                        rightOrigin: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        parent: {
+                            client: number;
+                            clock: number;
+                        } | /*elided*/ any | null;
+                        parentSub: string | null;
+                        redone: {
+                            client: number;
+                            clock: number;
+                        } | null;
+                        content: {
+                            getLength: () => number;
+                            getContent: () => Array<any>;
+                            isCountable: () => boolean;
+                            copy: () => import("yjs/dist/src/internals").AbstractContent;
+                            splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                            mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                            integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                            delete: (_transaction: import("yjs").Transaction) => void;
+                            gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                            write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                            getRef: () => number;
+                        };
+                        info: number;
+                        marker: boolean;
+                        keep: boolean;
+                        readonly countable: boolean;
+                        deleted: boolean;
+                        markDeleted: () => void;
+                        getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
+                        readonly lastId: {
+                            client: number;
+                            clock: number;
+                        };
+                        mergeWith: (right: import("yjs").Item) => boolean;
+                        delete: (transaction: import("yjs").Transaction) => void;
+                        gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                        write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                        id: {
+                            client: number;
+                            clock: number;
+                        };
+                        length: number;
+                        integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                    } | null;
                     _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                     observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                     observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2332,7 +6061,7 @@ declare const _default: import("vue").Ref<{
                     unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                     toJSON: () => any;
                 };
-                transaction: any;
+                transaction: /*elided*/ any;
                 _changes: Object | null;
                 _keys: (Map<string, {
                     action: "add" | "update" | "delete";
@@ -2345,10 +6074,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>) | null;
                 _delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2357,16 +6254,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2374,11 +6383,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[] | null;
                 _path: Array<string | number> | null;
                 readonly path: (string | number)[];
@@ -2394,10 +6403,178 @@ declare const _default: import("vue").Ref<{
                 }>, keyof Map<any, any>>;
                 readonly delta: {
                     insert?: string | object | any[] | {
-                        _item: any | null;
-                        _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                        _start: any | null;
-                        doc: any | null;
+                        _item: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        _map: Map<string, {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        }> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                        _start: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
+                        doc: /*elided*/ any | null;
                         _length: number;
                         _eH: {
                             l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2406,16 +6583,128 @@ declare const _default: import("vue").Ref<{
                             l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                         };
                         _searchMarker: {
-                            p: any;
+                            p: {
+                                origin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                left: /*elided*/ any | null;
+                                right: /*elided*/ any | null;
+                                rightOrigin: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                parent: {
+                                    client: number;
+                                    clock: number;
+                                } | /*elided*/ any | null;
+                                parentSub: string | null;
+                                redone: {
+                                    client: number;
+                                    clock: number;
+                                } | null;
+                                content: {
+                                    getLength: () => number;
+                                    getContent: () => Array<any>;
+                                    isCountable: () => boolean;
+                                    copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                    splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                    mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                    integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                    delete: (_transaction: import("yjs").Transaction) => void;
+                                    gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                    write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                    getRef: () => number;
+                                };
+                                info: number;
+                                marker: boolean;
+                                keep: boolean;
+                                readonly countable: boolean;
+                                deleted: boolean;
+                                markDeleted: () => void;
+                                getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                                readonly next: /*elided*/ any | null;
+                                readonly prev: /*elided*/ any | null;
+                                readonly lastId: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                mergeWith: (right: import("yjs").Item) => boolean;
+                                delete: (transaction: import("yjs").Transaction) => void;
+                                gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                                write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                                id: {
+                                    client: number;
+                                    clock: number;
+                                };
+                                length: number;
+                                integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                            };
                             index: number;
                             timestamp: number;
                         }[] | null;
-                        readonly parent: any | null;
+                        readonly parent: /*elided*/ any | null;
                         _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                         _copy: () => import("yjs").AbstractType<any>;
                         clone: () => import("yjs").AbstractType<any>;
                         _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                        readonly _first: any | null;
+                        readonly _first: {
+                            origin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            left: /*elided*/ any | null;
+                            right: /*elided*/ any | null;
+                            rightOrigin: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            parent: {
+                                client: number;
+                                clock: number;
+                            } | /*elided*/ any | null;
+                            parentSub: string | null;
+                            redone: {
+                                client: number;
+                                clock: number;
+                            } | null;
+                            content: {
+                                getLength: () => number;
+                                getContent: () => Array<any>;
+                                isCountable: () => boolean;
+                                copy: () => import("yjs/dist/src/internals").AbstractContent;
+                                splice: (_offset: number) => import("yjs/dist/src/internals").AbstractContent;
+                                mergeWith: (_right: import("yjs/dist/src/internals").AbstractContent) => boolean;
+                                integrate: (_transaction: import("yjs").Transaction, _item: import("yjs").Item) => void;
+                                delete: (_transaction: import("yjs").Transaction) => void;
+                                gc: (_store: import("yjs/dist/src/internals").StructStore) => void;
+                                write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, _offset: number) => void;
+                                getRef: () => number;
+                            };
+                            info: number;
+                            marker: boolean;
+                            keep: boolean;
+                            readonly countable: boolean;
+                            deleted: boolean;
+                            markDeleted: () => void;
+                            getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
+                            readonly next: /*elided*/ any | null;
+                            readonly prev: /*elided*/ any | null;
+                            readonly lastId: {
+                                client: number;
+                                clock: number;
+                            };
+                            mergeWith: (right: import("yjs").Item) => boolean;
+                            delete: (transaction: import("yjs").Transaction) => void;
+                            gc: (store: import("yjs/dist/src/internals").StructStore, parentGCd: boolean) => void;
+                            write: (encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2, offset: number) => void;
+                            id: {
+                                client: number;
+                                clock: number;
+                            };
+                            length: number;
+                            integrate: (transaction: import("yjs").Transaction, offset: number) => void;
+                        } | null;
                         _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                         observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                         observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2423,11 +6712,11 @@ declare const _default: import("vue").Ref<{
                         unobserveDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
                         toJSON: () => any;
                     } | undefined;
-                    retain?: number | undefined;
-                    delete?: number | undefined;
+                    retain?: number | undefined | undefined;
+                    delete?: number | undefined | undefined;
                     attributes?: {
                         [x: string]: any;
-                    } | undefined;
+                    } | undefined | undefined;
                 }[];
                 adds: (struct: import("yjs").AbstractStruct) => boolean;
                 readonly changes: {
@@ -2436,8 +6725,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -2446,10 +6735,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2458,16 +6747,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2500,8 +6789,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -2522,8 +6811,8 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | null;
-                        left: any | null;
-                        right: any | null;
+                        left: /*elided*/ any | null;
+                        right: /*elided*/ any | null;
                         rightOrigin: {
                             client: number;
                             clock: number;
@@ -2532,10 +6821,10 @@ declare const _default: import("vue").Ref<{
                             client: number;
                             clock: number;
                         } | {
-                            _item: any | null;
-                            _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                            _start: any | null;
-                            doc: any | null;
+                            _item: /*elided*/ any | null;
+                            _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                            _start: /*elided*/ any | null;
+                            doc: /*elided*/ any | null;
                             _length: number;
                             _eH: {
                                 l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2544,16 +6833,16 @@ declare const _default: import("vue").Ref<{
                                 l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                             };
                             _searchMarker: {
-                                p: any;
+                                p: /*elided*/ any;
                                 index: number;
                                 timestamp: number;
                             }[] | null;
-                            readonly parent: any | null;
+                            readonly parent: /*elided*/ any | null;
                             _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                             _copy: () => import("yjs").AbstractType<any>;
                             clone: () => import("yjs").AbstractType<any>;
                             _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                            readonly _first: any | null;
+                            readonly _first: /*elided*/ any | null;
                             _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                             observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                             observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2586,8 +6875,8 @@ declare const _default: import("vue").Ref<{
                         deleted: boolean;
                         markDeleted: () => void;
                         getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-                        readonly next: any | null;
-                        readonly prev: any | null;
+                        readonly next: /*elided*/ any | null;
+                        readonly prev: /*elided*/ any | null;
                         readonly lastId: {
                             client: number;
                             clock: number;
@@ -2611,9 +6900,9 @@ declare const _default: import("vue").Ref<{
                         oldValue: any;
                     }>, keyof Map<any, any>>;
                     delta: {
-                        insert?: Array<any> | string;
-                        delete?: number;
-                        retain?: number;
+                        insert?: (Array<any> | string) | undefined;
+                        delete?: number | undefined;
+                        retain?: number | undefined;
                     }[];
                 };
             }[]> & Omit<Map<import("yjs").AbstractType<import("yjs").YEvent<any>>, import("yjs").YEvent<any>[]>, keyof Map<any, any>>;
@@ -2631,19 +6920,19 @@ declare const _default: import("vue").Ref<{
             origin: any;
             meta: Map<any, any> & Omit<Map<any, any>, keyof Map<any, any>>;
             local: boolean;
-            subdocsAdded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsRemoved: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
-            subdocsLoaded: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsAdded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsRemoved: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
+            subdocsLoaded: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
             _needFormattingCleanup: boolean;
         }[];
-        subdocs: Set<any> & Omit<Set<Doc>, keyof Set<any>>;
+        subdocs: Set</*elided*/ any> & Omit<Set<Doc>, keyof Set<any>>;
         _item: {
             origin: {
                 client: number;
                 clock: number;
             } | null;
-            left: any | null;
-            right: any | null;
+            left: /*elided*/ any | null;
+            right: /*elided*/ any | null;
             rightOrigin: {
                 client: number;
                 clock: number;
@@ -2652,10 +6941,10 @@ declare const _default: import("vue").Ref<{
                 client: number;
                 clock: number;
             } | {
-                _item: any | null;
-                _map: Map<string, any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
-                _start: any | null;
-                doc: any | null;
+                _item: /*elided*/ any | null;
+                _map: Map<string, /*elided*/ any> & Omit<Map<string, import("yjs").Item>, keyof Map<any, any>>;
+                _start: /*elided*/ any | null;
+                doc: /*elided*/ any | null;
                 _length: number;
                 _eH: {
                     l: ((arg0: any, arg1: import("yjs").Transaction) => void)[];
@@ -2664,16 +6953,16 @@ declare const _default: import("vue").Ref<{
                     l: ((arg0: import("yjs").YEvent<any>[], arg1: import("yjs").Transaction) => void)[];
                 };
                 _searchMarker: {
-                    p: any;
+                    p: /*elided*/ any;
                     index: number;
                     timestamp: number;
                 }[] | null;
-                readonly parent: any | null;
+                readonly parent: /*elided*/ any | null;
                 _integrate: (y: Doc, item: import("yjs").Item | null) => void;
                 _copy: () => import("yjs").AbstractType<any>;
                 clone: () => import("yjs").AbstractType<any>;
                 _write: (_encoder: import("yjs").UpdateEncoderV1 | import("yjs").UpdateEncoderV2) => void;
-                readonly _first: any | null;
+                readonly _first: /*elided*/ any | null;
                 _callObserver: (transaction: import("yjs").Transaction, _parentSubs: Set<null | string>) => void;
                 observe: (f: (arg0: any, arg1: import("yjs").Transaction) => void) => void;
                 observeDeep: (f: (arg0: Array<import("yjs").YEvent<any>>, arg1: import("yjs").Transaction) => void) => void;
@@ -2706,8 +6995,8 @@ declare const _default: import("vue").Ref<{
             deleted: boolean;
             markDeleted: () => void;
             getMissing: (transaction: import("yjs").Transaction, store: import("yjs/dist/src/internals").StructStore) => null | number;
-            readonly next: any | null;
-            readonly prev: any | null;
+            readonly next: /*elided*/ any | null;
+            readonly prev: /*elided*/ any | null;
             readonly lastId: {
                 client: number;
                 clock: number;
@@ -2728,15 +7017,16 @@ declare const _default: import("vue").Ref<{
         meta: any;
         isLoaded: boolean;
         isSynced: boolean;
+        isDestroyed: boolean;
         whenLoaded: {
             then: <TResult1 = any, TResult2 = never>(onfulfilled?: ((value: any) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => Promise<TResult1 | TResult2>;
-            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any | TResult>;
+            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any>;
             finally: (onfinally?: (() => void) | null | undefined) => Promise<any>;
             readonly [Symbol.toStringTag]: string;
         };
         whenSynced: {
             then: <TResult1 = any, TResult2 = never>(onfulfilled?: ((value: any) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => Promise<TResult1 | TResult2>;
-            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any | TResult>;
+            catch: <TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | null | undefined) => Promise<any>;
             finally: (onfinally?: (() => void) | null | undefined) => Promise<any>;
             readonly [Symbol.toStringTag]: string;
         };

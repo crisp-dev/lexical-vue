@@ -23,9 +23,7 @@ declare const _default: <TEmbedConfig extends EmbedConfig>(__VLS_props: NonNulla
         }) => any;
     };
     emit: (e: "openEmbedModalForConfig", embedConfig: TEmbedConfig) => void;
-}>) => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
-    [key: string]: any;
-}> & {
+}>) => import("vue").VNode & {
     __ctx?: Awaited<typeof __VLS_setup>;
 };
 export default _default;

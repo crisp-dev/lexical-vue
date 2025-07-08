@@ -55,7 +55,23 @@ import {
   $isTextNode,
   $setSelection
 } from "lexical";
-import invariant from "tiny-invariant";
+
+// node_modules/tiny-invariant/dist/esm/tiny-invariant.js
+var isProduction = process.env.NODE_ENV === "production";
+var prefix = "Invariant failed";
+function invariant(condition, message) {
+  if (condition) {
+    return;
+  }
+  if (isProduction) {
+    throw new Error(prefix);
+  }
+  var provided = typeof message === "function" ? message() : message;
+  var value = provided ? "".concat(prefix, ": ").concat(provided) : prefix;
+  throw new Error(value);
+}
+
+// src/composables/useCharacterLimit.ts
 import { toValue, watchEffect } from "vue";
 function useCharacterLimit(editor, maxCharacters, optional = Object.freeze({})) {
   watchEffect((onInvalidate) => {
@@ -329,7 +345,6 @@ function useLexicalCommandsLog(editor) {
 
 // src/composables/useLexicalComposer.ts
 import { inject } from "vue";
-import invariant2 from "tiny-invariant";
 
 // src/composables/inject.ts
 var LexicalEditorProviderKey = "LexicalEditorProviderKey";
@@ -338,7 +353,7 @@ var LexicalEditorProviderKey = "LexicalEditorProviderKey";
 function useLexicalComposer() {
   const editor = inject(LexicalEditorProviderKey);
   if (!editor) {
-    invariant2(
+    invariant(
       false,
       "useLexicalComposer: cannot find a LexicalComposer"
     );
@@ -1886,7 +1901,7 @@ ${indentAfter}`);
               { style: { "margin-right": "20px" } },
               " Detected large EditorState, this can impact debugging performance. ",
               -1
-              /* HOISTED */
+              /* CACHED */
             )),
             _createElementVNode("button", {
               style: { "background": "transparent", "border": "1px solid white", "color": "white", "cursor": "pointer", "padding": "5px" },
@@ -2367,7 +2382,6 @@ var LexicalAutoScrollPlugin_default = _sfc_main15;
 import { defineComponent as _defineComponent16 } from "vue";
 import { $createHashtagNode, HashtagNode } from "@lexical/hashtag";
 import { onMounted as onMounted5 } from "vue";
-import invariant3 from "tiny-invariant";
 var _sfc_main16 = /* @__PURE__ */ _defineComponent16({
   __name: "LexicalHashtagPlugin",
   setup(__props) {
@@ -2406,7 +2420,7 @@ var _sfc_main16 = /* @__PURE__ */ _defineComponent16({
     const editor = useLexicalComposer();
     onMounted5(() => {
       if (!editor.hasNodes([HashtagNode]))
-        invariant3(false, "HashtagPlugin: HashtagNode not registered on editor");
+        invariant(false, "HashtagPlugin: HashtagNode not registered on editor");
     });
     function createHashtagNode(textNode) {
       return $createHashtagNode(textNode.getTextContent());
@@ -4034,7 +4048,6 @@ import { defineComponent as _defineComponent27 } from "vue";
 
 // src/components/LexicalAutoLinkPlugin/shared.ts
 import { toValue as toValue4, watchEffect as watchEffect12 } from "vue";
-import invariant4 from "tiny-invariant";
 import {
   $createAutoLinkNode,
   $isAutoLinkNode,
@@ -4198,7 +4211,7 @@ function replaceWithChildren(node) {
 function useAutoLink(editor, matchers, onChange) {
   watchEffect12((onInvalidate) => {
     if (!editor.hasNodes([AutoLinkNode2]))
-      invariant4(false, "LexicalAutoLinkPlugin: AutoLinkNode not registered on editor");
+      invariant(false, "LexicalAutoLinkPlugin: AutoLinkNode not registered on editor");
     const onChangeWrapped = (url, prevUrl) => {
       if (onChange)
         onChange(url, prevUrl);

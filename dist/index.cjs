@@ -1,9 +1,7 @@
 "use strict";
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -17,14 +15,6 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
@@ -140,12 +130,28 @@ var import_overflow = require("@lexical/overflow");
 var import_text2 = require("@lexical/text");
 var import_utils2 = require("@lexical/utils");
 var import_lexical = require("lexical");
-var import_tiny_invariant = __toESM(require("tiny-invariant"), 1);
+
+// node_modules/tiny-invariant/dist/esm/tiny-invariant.js
+var isProduction = process.env.NODE_ENV === "production";
+var prefix = "Invariant failed";
+function invariant(condition, message) {
+  if (condition) {
+    return;
+  }
+  if (isProduction) {
+    throw new Error(prefix);
+  }
+  var provided = typeof message === "function" ? message() : message;
+  var value = provided ? "".concat(prefix, ": ").concat(provided) : prefix;
+  throw new Error(value);
+}
+
+// src/composables/useCharacterLimit.ts
 var import_vue3 = require("vue");
 function useCharacterLimit(editor, maxCharacters, optional = Object.freeze({})) {
   (0, import_vue3.watchEffect)((onInvalidate) => {
     if (!editor.hasNodes([import_overflow.OverflowNode])) {
-      (0, import_tiny_invariant.default)(
+      invariant(
         false,
         "useCharacterLimit: OverflowNode not registered on editor"
       );
@@ -414,7 +420,6 @@ function useLexicalCommandsLog(editor) {
 
 // src/composables/useLexicalComposer.ts
 var import_vue8 = require("vue");
-var import_tiny_invariant2 = __toESM(require("tiny-invariant"), 1);
 
 // src/composables/inject.ts
 var LexicalEditorProviderKey = "LexicalEditorProviderKey";
@@ -423,7 +428,7 @@ var LexicalEditorProviderKey = "LexicalEditorProviderKey";
 function useLexicalComposer() {
   const editor = (0, import_vue8.inject)(LexicalEditorProviderKey);
   if (!editor) {
-    (0, import_tiny_invariant2.default)(
+    invariant(
       false,
       "useLexicalComposer: cannot find a LexicalComposer"
     );
@@ -1924,7 +1929,7 @@ ${indentAfter}`);
               { style: { "margin-right": "20px" } },
               " Detected large EditorState, this can impact debugging performance. ",
               -1
-              /* HOISTED */
+              /* CACHED */
             )),
             (0, import_vue29.createElementVNode)("button", {
               style: { "background": "transparent", "border": "1px solid white", "color": "white", "cursor": "pointer", "padding": "5px" },
@@ -2382,7 +2387,6 @@ var LexicalAutoScrollPlugin_default = _sfc_main15;
 var import_vue45 = require("vue");
 var import_hashtag = require("@lexical/hashtag");
 var import_vue46 = require("vue");
-var import_tiny_invariant3 = __toESM(require("tiny-invariant"));
 var _sfc_main16 = /* @__PURE__ */ (0, import_vue45.defineComponent)({
   __name: "LexicalHashtagPlugin",
   setup(__props) {
@@ -2421,7 +2425,7 @@ var _sfc_main16 = /* @__PURE__ */ (0, import_vue45.defineComponent)({
     const editor = useLexicalComposer();
     (0, import_vue46.onMounted)(() => {
       if (!editor.hasNodes([import_hashtag.HashtagNode]))
-        (0, import_tiny_invariant3.default)(false, "HashtagPlugin: HashtagNode not registered on editor");
+        invariant(false, "HashtagPlugin: HashtagNode not registered on editor");
     });
     function createHashtagNode(textNode) {
       return (0, import_hashtag.$createHashtagNode)(textNode.getTextContent());
@@ -3977,7 +3981,6 @@ var import_vue73 = require("vue");
 
 // src/components/LexicalAutoLinkPlugin/shared.ts
 var import_vue72 = require("vue");
-var import_tiny_invariant4 = __toESM(require("tiny-invariant"), 1);
 var import_link5 = require("@lexical/link");
 var import_utils19 = require("@lexical/utils");
 var import_lexical24 = require("lexical");
@@ -4125,7 +4128,7 @@ function replaceWithChildren(node) {
 function useAutoLink(editor, matchers, onChange) {
   (0, import_vue72.watchEffect)((onInvalidate) => {
     if (!editor.hasNodes([import_link5.AutoLinkNode]))
-      (0, import_tiny_invariant4.default)(false, "LexicalAutoLinkPlugin: AutoLinkNode not registered on editor");
+      invariant(false, "LexicalAutoLinkPlugin: AutoLinkNode not registered on editor");
     const onChangeWrapped = (url, prevUrl) => {
       if (onChange)
         onChange(url, prevUrl);
